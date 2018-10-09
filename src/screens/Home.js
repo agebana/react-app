@@ -1,3 +1,9 @@
 import React from "react";
 
-export default props => <div>This is the home screen</div>;
+export const path = "/";
+export const Component = props => <div>This is the home screen!</div>;
+
+export default {
+  path,
+  component: Component
+};

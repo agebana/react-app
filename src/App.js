@@ -8,19 +8,23 @@ import {
   Switch
 } from "react-router-dom";
 import withProvider from "./Provider";
-import Home from "./screens/Home";
-import NotFound from "./screens/NotFound";
+import HomeScreen from "./screens/Home";
+import NotFoundScreen from "./screens/NotFound";
 
 const NoMatch = props => <Redirect to="/404" />;
 
 export default compose(
   hot(module),
   withProvider
-)(_props => (
+)(props => (
   <Router>
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/404" component={NotFound} />
+      <Route exact path={HomeScreen.path} component={HomeScreen.component} />
+      <Route
+        exact
+        path={NotFoundScreen.path}
+        component={NotFoundScreen.component}
+      />
       <Route component={NoMatch} />
     </Switch>
   </Router>
