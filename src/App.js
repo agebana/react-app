@@ -10,8 +10,9 @@ import {
 import withProvider from "./Provider";
 import HomeScreen from "./screens/Home";
 import NotFoundScreen from "./screens/NotFound";
+import NotFound from "./screens/NotFound";
 
-const NoMatch = props => <Redirect to="/404" />;
+const NoMatch = props => <Redirect to={NotFound.path} />;
 
 export default compose(
   hot(module),
