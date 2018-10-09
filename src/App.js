@@ -1,4 +1,10 @@
+import { compose } from "recompose";
 import React from "react";
 import { hot } from "react-hot-loader";
 
-export default hot(module)(_props => <div>Hello, World!</div>);
+import withProvider from "./Provider";
+
+export default compose(
+  hot(module),
+  withProvider
+)(_props => <div>Hello, World!</div>);
