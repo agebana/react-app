@@ -14,7 +14,10 @@ module.exports = {
   resolve: {
     alias: {
       ["@src"]: path.resolve(__dirname, "src/"),
-    }
+      ["@css"]: path.resolve(__dirname, "src/css/"),
+      ["@screens"]: path.resolve(__dirname, "src/screens/")
+    },
+    extensions: [".js", ".jsx", ".css"]
   },
   plugins: [
     new HtmlWebpackPlugin({

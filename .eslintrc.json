@@ -43,7 +43,9 @@
   },
   "settings": {
     "import/resolver": {
-      "babel-module": {}
+      "node": {
+        "extensions": [".js", ".json", ".css", ".styl"]
+      }
     },
     "propWrapperFunctions": ["forbidExtraProps"],
     "react": {
