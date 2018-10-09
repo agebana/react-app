@@ -4770,6 +4770,10 @@ redent@^1.0.0:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
 
+redux-devtools-extension@^2.13.5:
+  version "2.13.5"
+  resolved "https://registry.yarnpkg.com/redux-devtools-extension/-/redux-devtools-extension-2.13.5.tgz#3ff34f7227acfeef3964194f5f7fc2765e5c5a39"
+
 redux-first-router-link@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/redux-first-router-link/-/redux-first-router-link-1.4.2.tgz#2cd5274fe12539f617068bb2412f329f437813d2"
