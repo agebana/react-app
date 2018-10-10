@@ -1,6 +1,6 @@
-$my_color: #dbdbdb;
+@import "theme";
 
 .root {
-  background-color: $my_color;
+  background-color: theme-color("primary", "dark");
   height: 100%;
 }
