@@ -44,7 +44,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".json", ".css", ".styl"]
+        "extensions": [".js", ".json", ".css", ".scss", ".styl"]
       }
     },
     "propWrapperFunctions": ["forbidExtraProps"],

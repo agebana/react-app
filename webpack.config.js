@@ -17,7 +17,7 @@ module.exports = {
       ["@css"]: path.resolve(__dirname, "src/css/"),
       ["@screens"]: path.resolve(__dirname, "src/screens/")
     },
-    extensions: [".js", ".jsx", ".css"]
+    extensions: [".js", ".jsx", ".css", ".scss"]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -51,8 +51,12 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
+        test: /\.s?css$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader", options: { modules: true, sourceMap: true } },
+          { loader: "sass-loader", options: { sourceMap: true } }
+        ]
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,
