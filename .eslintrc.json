@@ -1,6 +1,7 @@
 {
   "rules": {
     "import/no-absolute-path": 2,
+    "import/no-unresolved": 0,
     "import/newline-after-import": [
       2,
       {
@@ -44,7 +45,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".json", ".css", ".scss", ".styl"]
+        "extensions": [".js", "jsx", ".json"]
       }
     },
     "propWrapperFunctions": ["forbidExtraProps"],
