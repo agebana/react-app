@@ -1,10 +1,26 @@
-@import "@styles/theme";
 @import "@styles/mixins";
+@import "@styles/theme";
 @import "@styles/spacing";
 
 .root {
   @include padding("lv2");
   @include shadow(0px 2px 2px #000000bb);
-  height: 48px;
+  min-height: 48px;
   background-color: theme-color("background", "light");
+}
+
+.content {
+  @include breakpoint(sm) {
+    @include mx-auto();
+  }
+  @include flex-container(row);
+  max-width: 1080px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  @include flex-container(row);
+  width: 400px;
+  justify-content: space-around;
 }
