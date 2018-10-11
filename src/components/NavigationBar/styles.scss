@@ -1,12 +1,12 @@
 @import "@styles/mixins";
-@import "@styles/theme";
 @import "@styles/spacing";
+@import "@styles/theme";
 
 .root {
+  @include apply-font-color("primary");
   @include padding("lv2");
-  @include shadow(0px 2px 2px #000000bb);
   min-height: 48px;
-  background-color: theme-color("background", "light");
+  background-color: theme-color("primary");
 }
 
 .content {

@@ -1,6 +1,27 @@
-@import "~@styles/theme";
+@import "@styles/mixins";
+@import "@styles/theme";
+@import "@styles/spacing";
 
 .root {
+  @include flex-container(row);
   flex: 1;
-  background-color: theme-color("primary");
+  background-color: theme-color("background");
+}
+
+.content {
+  @include hint-borders();
+  width: 960px;
+}
+
+.sideSection {
+  @include flex-container(row);
+  flex: 1;
+}
+
+.sideMenu {
+  @include hint-borders();
+  @include mx-auto();
+  height: 500px;
+  min-width: 260px;
+  margin-top: 42px;
 }

@@ -1,8 +1,8 @@
 $theme-colors: (
   "primary": (
-    "base": #384ea9,
-    "light": #e4efff,
-    "dark": #273677
+    "base": #252525,
+    "light": #333333,
+    "dark": #000000
   ),
   "accent": (
     "base": #f08110,
@@ -24,4 +24,36 @@ $theme-colors: (
 @function theme-color($key: "primary", $variant: "base") {
   $map: map-get($theme-colors, $key);
   @return map-get($map, $variant);
+}
+
+$font-colors: (
+  "primary": (
+    "base": #ffffff,
+    "light": #d3d3d3,
+    "dark": #d3d3d3
+  ),
+  "accent": (
+    "base": #383838ab,
+    "light": #383838ab,
+    "dark": #383838ab
+  ),
+  "foreground": (
+    "base": #a7a7a7,
+    "light": #a7a7a7,
+    "dark": #a7a7a7
+  ),
+  "background": (
+    "base": #707070,
+    "light": #707070,
+    "dark": #707070
+  )
+);
+
+@function font-color($key: "primary", $variant: "base") {
+  $map: map-get($font-colors, $key);
+  @return map-get($map, $variant);
+}
+
+@mixin apply-font-color($key: "primary", $variant: "base") {
+  color: font-color($key, $variant);
 }
