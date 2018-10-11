@@ -14,10 +14,10 @@ module.exports = {
   },
   resolve: {
     alias: {
-      ["@src"]: path.resolve(__dirname, "src/"),
-      ["@css"]: path.resolve(__dirname, "src/css/"),
+      ["@components"]: path.resolve(__dirname, "src/components/"),
+      ["@styles"]: path.resolve(__dirname, "src/styles/"),
       ["@screens"]: path.resolve(__dirname, "src/screens/"),
-      ["@components"]: path.resolve(__dirname, "src/components/")
+      ["@src"]: path.resolve(__dirname, "src/")
     },
     extensions: [".js", ".jsx", ".css", ".scss"]
   },
