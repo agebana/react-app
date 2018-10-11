@@ -20,7 +20,7 @@ export default compose(
   withProvider
 )(props => (
   <Router>
-    <div className={styles.appRoot}>
+    <div className={styles.appContainer}>
       <NavigationBar />
       <Switch>
         <Route exact path={HomeScreen.path} component={HomeScreen.component} />

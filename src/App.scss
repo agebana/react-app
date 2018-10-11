@@ -1,12 +1,13 @@
-$background_color: #87cefa;
+@import "@styles/helpers";
 
 body {
-  padding: 0;
-  margin: 0;
-  background-color: $background_color;
   height: 100vh;
+  margin: 0;
+  div {
+    height: 100%;
+  }
 }
 
-#app {
-  height: 100%;
+.appContainer {
+  @include flex-container(column);
 }
