@@ -8,6 +8,11 @@ body {
   margin: 0;
 }
 
-.App {
+.AppRoot {
   height: 100vh;
+}
+
+.App {
+  @include flex-container(column);
+  height: 100%;
 }

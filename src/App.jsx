@@ -19,9 +19,9 @@ export default compose(
   hot(module),
   withProvider
 )(props => (
-  <div className={styles.App}>
+  <div className={styles.AppRoot}>
     <Router>
-      <div>
+      <div className={styles.App}>
         <NavigationBar />
         <Switch>
           <Route
