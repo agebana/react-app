@@ -7,6 +7,7 @@ import {
   Route,
   Switch
 } from "react-router-dom";
+import styles from "./App.scss";
 import withProvider from "./Provider";
 import NavigationBar from "@components/NavigationBar";
 import HomeScreen from "@screens/Home";
@@ -20,7 +21,7 @@ export default compose(
   withProvider
 )(props => (
   <Router>
-    <div>
+    <div className={styles.appRoot}>
       <NavigationBar />
       <Switch>
         <Route exact path={HomeScreen.path} component={HomeScreen.component} />

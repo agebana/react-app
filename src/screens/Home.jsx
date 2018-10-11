@@ -1,4 +1,4 @@
-import styles from "@css/Home";
+import styles from "./Home.scss";
 import React from "react";
 
 export const path = "/";
