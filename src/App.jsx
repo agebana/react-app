@@ -19,18 +19,24 @@ export default compose(
   hot(module),
   withProvider
 )(props => (
-  <Router>
-    <div className={styles.appContainer}>
-      <NavigationBar />
-      <Switch>
-        <Route exact path={HomeScreen.path} component={HomeScreen.component} />
-        <Route
-          exact
-          path={NotFoundScreen.path}
-          component={NotFoundScreen.component}
-        />
-        <Route component={NoMatch} />
-      </Switch>
-    </div>
-  </Router>
+  <div className={styles.App}>
+    <Router>
+      <div>
+        <NavigationBar />
+        <Switch>
+          <Route
+            exact
+            path={HomeScreen.path}
+            component={HomeScreen.component}
+          />
+          <Route
+            exact
+            path={NotFoundScreen.path}
+            component={NotFoundScreen.component}
+          />
+          <Route component={NoMatch} />
+        </Switch>
+      </div>
+    </Router>
+  </div>
 ));
