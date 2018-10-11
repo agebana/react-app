@@ -10,11 +10,10 @@ import {
 import styles from "./App.scss";
 import withProvider from "./Provider";
 import NavigationBar from "@components/NavigationBar";
-import HomeScreen from "@screens/Home";
-import NotFoundScreen from "@screens/NotFound";
-import NotFound from "@screens/NotFound";
+import HomeScreen from "@components/Home";
+import NotFoundScreen from "@components/NotFound";
 
-const NoMatch = props => <Redirect to={NotFound.path} />;
+const NoMatch = props => <Redirect to={NotFoundScreen.path} />;
 
 export default compose(
   hot(module),
