@@ -1,0 +1,9 @@
+@mixin shadow($shadow...) {
+  box-shadow: $shadow;
+  position: relative;
+}
+
+@mixin flex-container($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
