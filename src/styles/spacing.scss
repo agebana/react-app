@@ -13,3 +13,8 @@ $spacing-levels: (
 @mixin padding($level: "lv1") {
   padding: map-get($spacing-levels, $level);
 }
+
+@mixin mx-auto() {
+  margin-left: auto;
+  margin-right: auto;
+}
