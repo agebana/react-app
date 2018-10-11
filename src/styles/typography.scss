@@ -1,0 +1,21 @@
+$font-primary: Arial;
+$font-secondary: Georgia;
+
+/* set base values */
+$text-base-size: 1em;
+$text-scale-ratio: 1.2;
+$text-xs: (1em / (($text-scale-ratio) * ($text-scale-ratio)));
+$text-sm: (1em / ($text-scale-ratio));
+$text-md: (1em * ($text-scale-ratio));
+$text-lg: (1em * ($text-scale-ratio) * ($text-scale-ratio));
+$text-xl: (
+  1em * ($text-scale-ratio) * ($text-scale-ratio) * ($text-scale-ratio)
+);
+$text-xxl: (
+  1em * ($text-scale-ratio) * ($text-scale-ratio) * ($text-scale-ratio) *
+    ($text-scale-ratio)
+);
+$text-xxxl: (
+  1em * ($text-scale-ratio) * ($text-scale-ratio) * ($text-scale-ratio) *
+    ($text-scale-ratio) * ($text-scale-ratio)
+);
