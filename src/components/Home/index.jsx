@@ -14,7 +14,9 @@ export const Component = props => (
       <h2>This is a section header</h2>
       <p>This is a paragraph</p>
     </div>
-    <div className={styles.sideSection}>Right</div>
+    <div className={styles.sideSection}>
+      <div className={styles.extraFeed}>Extra section</div>
+    </div>
   </div>
 );
 

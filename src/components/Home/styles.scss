@@ -5,12 +5,13 @@
 .root {
   @include flex-container(row);
   flex: 1;
-  background-color: theme-color("background");
+  background-color: theme-color("background", "dark");
 }
 
 .content {
   @include hint-borders();
   width: 960px;
+  background-color: theme-color("background");
 }
 
 .sideSection {
@@ -24,4 +25,14 @@
   height: 500px;
   min-width: 260px;
   margin-top: 42px;
+  background-color: theme-color("background");
+}
+
+.extraFeed {
+  @include hint-borders();
+  @include mx-auto();
+  height: 300px;
+  min-width: 260px;
+  margin-top: 42px;
+  background-color: theme-color("background");
 }

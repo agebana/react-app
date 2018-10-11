@@ -33,3 +33,7 @@
 @mixin hint-borders() {
   border: 2px dashed #00000055;
 }
+
+@mixin rounded-borders() {
+  border-radius: 12px;
+}
