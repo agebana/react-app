@@ -1,8 +1,12 @@
-@import "@styles/helpers";
+@import "@styles/mixins";
+@import "@styles/typography";
 
 body {
+  @include define-typography();
+
   height: 100vh;
   margin: 0;
+
   div {
     height: 100%;
   }

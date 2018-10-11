@@ -1,21 +1,16 @@
-$font-primary: Arial;
-$font-secondary: Georgia;
+$font-primary: "Assistant", sans-serif;
+$font-secondary: "Roboto Slab", serif;
 
 /* set base values */
 $text-base-size: 1em;
-$text-scale-ratio: 1.2;
-$text-xs: (1em / (($text-scale-ratio) * ($text-scale-ratio)));
-$text-sm: (1em / ($text-scale-ratio));
-$text-md: (1em * ($text-scale-ratio));
-$text-lg: (1em * ($text-scale-ratio) * ($text-scale-ratio));
-$text-xl: (
-  1em * ($text-scale-ratio) * ($text-scale-ratio) * ($text-scale-ratio)
-);
-$text-xxl: (
-  1em * ($text-scale-ratio) * ($text-scale-ratio) * ($text-scale-ratio) *
-    ($text-scale-ratio)
-);
-$text-xxxl: (
-  1em * ($text-scale-ratio) * ($text-scale-ratio) * ($text-scale-ratio) *
-    ($text-scale-ratio) * ($text-scale-ratio)
-);
+$text-scale-ratio: 1;
+
+@mixin define-typography() {
+  font-size: $text-base-size * $text-scale-ratio;
+  font-family: $font-primary;
+
+  h1 {
+    margin-top: 12px;
+    margin-bottom: 0px;
+  }
+}
