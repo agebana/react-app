@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import styles from "./App.scss";
 import withProvider from "./Provider";
-import NavigationBar from "@components/NavigationBar";
 import HomeScreen from "@components/Home";
 import NotFoundScreen from "@components/NotFound";
 
@@ -22,7 +21,6 @@ export default compose(
   <div className={styles.AppRoot}>
     <Router>
       <div className={styles.App}>
-        <NavigationBar />
         <Switch>
           <Route
             exact
