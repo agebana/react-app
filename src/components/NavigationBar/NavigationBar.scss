@@ -1,0 +1,15 @@
+@import "@styles/mixins";
+@import "@styles/theme";
+
+.root {
+  height: 60px;
+  background-color: theme-color("c1");
+}
+
+.linkGroup {
+  @include flex-container(row);
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}

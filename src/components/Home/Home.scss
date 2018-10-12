@@ -1,0 +1,12 @@
+@import "@styles/mixins";
+@import "@styles/theme";
+@import "@styles/spacing";
+
+.root {
+  @include flex-container(column);
+  @include hint-borders();
+  width: 620px;
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+}

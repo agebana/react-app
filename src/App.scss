@@ -1,5 +1,6 @@
 @import "@styles/mixins";
 @import "@styles/typography";
+@import "@styles/theme";
 
 body {
   @include define-typography();
@@ -15,4 +16,5 @@ body {
 .App {
   @include flex-container(column);
   height: 100%;
+  background-color: theme-color("background");
 }

@@ -11,6 +11,7 @@ import styles from "./App.scss";
 import withProvider from "./Provider";
 import HomeScreen from "@components/Home";
 import NotFoundScreen from "@components/NotFound";
+import NavigationBar from "@components/NavigationBar";
 
 const NoMatch = props => <Redirect to={NotFoundScreen.path} />;
 
@@ -21,6 +22,7 @@ export default compose(
   <div className={styles.AppRoot}>
     <Router>
       <div className={styles.App}>
+        <NavigationBar />
         <Switch>
           <Route
             exact
