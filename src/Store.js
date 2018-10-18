@@ -10,13 +10,17 @@ const composeEnhancers = composeWithDevTools({
   // Specify name here, actionsBlacklist, actionsCreaters and other options if needed
 });
 
-const middleware = [createSagaMiddleware()];
+const sagaMiddleware = createSagaMiddleware();
+
+const middleware = [sagaMiddleware];
 
 const store = createStore(
   rootReducer,
   composeEnhancers(applyMiddleware(...middleware))
   // Specify name here, actionsBlacklist, actionsCreators and other options if needed
 );
+
+sagaMiddleware.run(rootSaga);
 
 export const Provider = ({ children }) => (
   <BaseStoreProvider store={store}>{children}</BaseStoreProvider>
