@@ -11,5 +11,17 @@
   width: 600px;
   margin-left: auto;
   margin-right: auto;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.link {
+  font-size: 32px;
+  text-decoration: none;
+  color: theme-color("c2");
+  &:hover {
+    color: theme-color("c2", "light");
+  }
+  &:active {
+    color: theme-color("c2", "dark");
+  }
 }
