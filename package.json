@@ -1,6 +1,6 @@
 {
-  "name": "starter-kit",
-  "version": "0.2.0",
+  "name": "react-app",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
