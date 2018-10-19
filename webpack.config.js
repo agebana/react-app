@@ -18,7 +18,8 @@ module.exports = {
       ["@styles"]: path.resolve(__dirname, "src/styles/"),
       ["@src"]: path.resolve(__dirname, "src/"),
       ["@api"]: path.resolve(__dirname, "src/api"),
-      ["@ducks"]: path.resolve(__dirname, "src/ducks")
+      ["@ducks"]: path.resolve(__dirname, "src/ducks"),
+      ["@enhancers"]: path.resolve(__dirname, "src/enhancers")
     },
     extensions: [".js", ".jsx", ".css", ".scss"]
   },
