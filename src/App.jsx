@@ -14,7 +14,27 @@ import NotFoundScreen from "@components/NotFound";
 import WoofrScreen from "@components/Woofr";
 import NavigationBar from "@components/NavigationBar";
 
-const NoMatch = props => <Redirect to={NotFoundScreen.path} />;
+const routes = [
+  {
+    component: () => <HomeScreen />,
+    path: "/",
+    exact: true
+  },
+  {
+    component: () => <WoofrScreen />,
+    path: "/woofr"
+  }
+];
+
+const DefinedRoutes = () => (
+  <React.Fragment>
+    {routes.map(route => (
+      <Route key={route.path} {...route} />
+    ))}
+  </React.Fragment>
+);
+
+const NoMatch = props => <Redirect to={"/notFound"} />;
 
 export default compose(
   hot(module),
@@ -25,21 +45,7 @@ export default compose(
       <div className={styles.App}>
         <NavigationBar />
         <Switch>
-          <Route
-            exact
-            path={HomeScreen.path}
-            component={HomeScreen.component}
-          />
-          <Route
-            exact
-            path={WoofrScreen.path}
-            component={WoofrScreen.component}
-          />
-          <Route
-            exact
-            path={NotFoundScreen.path}
-            component={NotFoundScreen.component}
-          />
+          <DefinedRoutes />
           <Route component={NoMatch} />
         </Switch>
       </div>
