@@ -1,50 +1,24 @@
 import styles from "./Woofr";
 import React from "react";
-import { connect } from "react-redux";
-import { compose, withStateHandlers, lifecycle } from "recompose";
-import { fetchRandomDogs } from "@ducks/Woofr";
+import { compose } from "recompose";
+import withActionOnMount from "@enhancers/withActionOnMount";
+import withState from "@enhancers/withState";
+import { fetchRandomDogs, stateSelector } from "@ducks/Woofr";
 
-export const path = "/woofr";
-
-const delay = t => new Promise(resolve => setTimeout(resolve, t));
-
-const withAsyncData = Component =>
-  compose(
-    connect(
-      null,
-      { fetchRandomDogs }
-    ),
-    withStateHandlers(
-      {
-        data: ["foo", "bar"]
-      },
-      {
-        updateData: (state, props) => payload => ({ data: payload })
-      }
-    ),
-    lifecycle({
-      componentDidMount() {
-        this.props.fetchRandomDogs("wa");
-      }
-    })
-  )(Component);
-
-const Woof = withAsyncData(({ updateData, data }) => (
+const Woof = compose(
+  withState(stateSelector),
+  withActionOnMount(fetchRandomDogs())
+)(({ data }) => (
   <div>
-    <div>Woof, woof! {data}</div>
-    <button onClick={() => updateData(["hello world"])}>Get doggos</button>
+    <div>Woof, woof!</div>
+    <button onClick={() => console.log(props)}>Get doggos</button>
     <div />
   </div>
 ));
 
-export const Component = props => (
+export default props => (
   <div className={styles.root}>
     <h1>Random Dog Pictures</h1>
     <Woof />
   </div>
 );
-
-export default {
-  path,
-  component: Component
-};
