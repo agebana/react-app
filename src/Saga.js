@@ -4,6 +4,6 @@ import { saga as apiSaga } from "./api";
 export default function* rootSaga() {
   yield all([
     // fork sagas here
-    apiSaga
+    fork(apiSaga)
   ]);
 }
