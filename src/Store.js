@@ -3,8 +3,8 @@ import { Provider as BaseStoreProvider } from "react-redux";
 import { applyMiddleware, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import createSagaMiddleware from "redux-saga";
-import rootReducer from "./Reducer";
-import rootSaga from "./Saga";
+import rootReducer from "./reducer";
+import rootSaga from "./saga";
 
 const composeEnhancers = composeWithDevTools({
   // Specify name here, actionsBlacklist, actionsCreaters and other options if needed
