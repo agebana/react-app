@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import { handleActions } from "redux-actions";
 import { fetchRandomDogs, fetchRandomDogsSuccess } from "./action";
 import saga from "./saga";
+import stateSelector from "./selector";
 
 export const storeKey = "woofr";
 
@@ -19,4 +20,4 @@ export default handleActions(
   initialState
 );
 
-export { fetchRandomDogs, fetchRandomDogsSuccess, saga };
+export { fetchRandomDogs, fetchRandomDogsSuccess, saga, stateSelector };
