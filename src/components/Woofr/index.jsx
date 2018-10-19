@@ -2,7 +2,7 @@ import styles from "./Woofr";
 import React from "react";
 import { connect } from "react-redux";
 import { compose, withStateHandlers, lifecycle } from "recompose";
-import { fetchRandomDogs } from "@api";
+import { fetchRandomDogs } from "@ducks/Woofr";
 
 export const path = "/woofr";
 
@@ -16,23 +16,23 @@ const withAsyncData = Component =>
     ),
     withStateHandlers(
       {
-        foo: "bar"
+        data: ["foo", "bar"]
       },
       {
-        updateData: (state, props) => payload => ({ foo: payload })
+        updateData: (state, props) => payload => ({ data: payload })
       }
     ),
     lifecycle({
       componentDidMount() {
-        this.props.fetchRandomDogs();
+        this.props.fetchRandomDogs("wa");
       }
     })
   )(Component);
 
-const Woof = withAsyncData(({ updateData, foo }) => (
+const Woof = withAsyncData(({ updateData, data }) => (
   <div>
-    <div>Woof, woof! {foo}</div>
-    <button onClick={() => updateData("hello world")}>Get doggos</button>
+    <div>Woof, woof! {data}</div>
+    <button onClick={() => updateData(["hello world"])}>Get doggos</button>
     <div />
   </div>
 ));
