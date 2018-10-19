@@ -1,6 +1,8 @@
 import styles from "./Woofr";
 import React from "react";
+import { connect } from "react-redux";
 import { compose, withStateHandlers, lifecycle } from "recompose";
+import { fetchRandomDogs } from "@api";
 
 export const path = "/woofr";
 
@@ -8,6 +10,10 @@ const delay = t => new Promise(resolve => setTimeout(resolve, t));
 
 const withAsyncData = Component =>
   compose(
+    connect(
+      null,
+      { fetchRandomDogs }
+    ),
     withStateHandlers(
       {
         foo: "bar"
@@ -18,9 +24,7 @@ const withAsyncData = Component =>
     ),
     lifecycle({
       componentDidMount() {
-        delay(2000).then(() => {
-          this.props.updateData("boyz");
-        });
+        this.props.fetchRandomDogs();
       }
     })
   )(Component);
